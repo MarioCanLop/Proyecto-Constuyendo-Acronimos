@@ -24,6 +24,34 @@ public class Construyendo_Acronimos {
         return frase_bien;
     }
 
+    public static String formato(){
+        String frase_comp = comprobar();
+        boolean form = frase_comp.matches("^[a-zA-Z0-9 ]*$");
+
+        while (form == false){
+            frase_comp = comprobar();
+            form = frase_comp.matches("^[a-zA-Z0-9 ]*$");
+        }
+
+
+
+        return frase_comp;
+    }
+    public static String acronimo (String frase){
+
+        String acronimo_ [] = frase.split("\\s+");
+        String acron_fin = "";
+        System.out.println();
+        for (int i = 0; i < acronimo_.length; i++){
+            char letra = acronimo_[i].charAt(0);
+            if ( Character.isUpperCase(letra)){
+                System.out.print(letra);
+
+            }
+        }
+
+        return frase;
+    }
 
     public static void main(String[] args){
 
@@ -32,10 +60,13 @@ public class Construyendo_Acronimos {
         int num_acronimos = entrada.nextInt();
         String[] frases = new String[num_acronimos ];
         for (int i = 0 ; i < frases.length; i++){
-            System.out.println(i);
-            frases[i] = comprobar();
+            frases[i] = formato();
 
         }
-        System.out.println(Arrays.toString(frases));
+        String [] acronimos = new String[frases.length];
+        for (int i = 0; i< frases.length; i++){
+            String frase = frases[i];
+            acronimos [i] = acronimo(frase);
+        }
     }
 }
