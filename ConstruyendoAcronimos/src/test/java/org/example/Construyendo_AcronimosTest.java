@@ -1,26 +1,31 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Construyendo_AcronimosTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void entrada() {
+
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void comprobar() {
+        
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void formato() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void acronimo() {
+
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void main() {
     }
 }
